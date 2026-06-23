@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact & Quote | S & D & T Enterprises — Manchester, Ohio</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;color:#1e293b;background:#fff;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Playfair Display',serif}
+a{text-decoration:none;color:inherit}img{display:block;max-width:100%}
+:root{--blue:#2563eb;--blue-l:#3b82f6;--blue-pale:#eff6ff;--blue-mid:#dbeafe;--slate:#1e293b;--slate2:#334155;--muted:#64748b;--border:#e2e8f0}
+.topbar{background:#0f172a;color:#64748b;font-size:.78rem;padding:8px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.tb-left{display:flex;gap:18px;flex-wrap:wrap}.tb-left span{display:flex;align-items:center;gap:5px}
+.topbar a{color:#7dd3fc}.topbar a:hover{color:#fff}
+.tb-phone{background:var(--blue);color:#fff!important;padding:5px 14px;border-radius:4px;font-weight:600;font-size:.8rem}
+nav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 1px 8px rgba(0,0,0,.07)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-brand{display:flex;align-items:center;gap:11px}
+.nav-logo{background:var(--blue);color:#fff;width:40px;height:40px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:.95rem;flex-shrink:0}
+.nav-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--slate);line-height:1.15}
+.nav-sub{font-size:.65rem;color:var(--muted);}
+.nav-links{display:flex;gap:2px;list-style:none;align-items:center}
+.nav-links a{font-size:.83rem;font-weight:500;color:var(--slate2);padding:7px 12px;border-radius:6px;transition:.2s}
+.nav-links a:hover,.nav-links a.active{background:var(--blue-pale);color:var(--blue)}
+.nav-cta{background:var(--blue)!important;color:#fff!important;padding:8px 16px!important;border-radius:6px!important;font-weight:600!important}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.burger span{width:22px;height:2px;background:var(--slate);border-radius:2px;display:block}
+.mob-menu{display:none;background:#fff;border-top:1px solid var(--border);padding:10px 20px;flex-direction:column;gap:2px}
+.mob-menu a{display:block;padding:10px 12px;color:var(--slate2);font-size:.88rem;border-radius:6px}
+.mob-menu a:hover,.mob-menu a.active{background:var(--blue-pale);color:var(--blue)}
+.mob-menu.open{display:flex}
+section{padding:72px 0}.container{max-width:1200px;margin:0 auto;padding:0 20px}
+.sec-lbl{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+.sec-title{font-size:clamp(1.7rem,3vw,2.4rem);color:var(--slate);margin-bottom:12px;line-height:1.2}
+.sec-sub{font-size:.93rem;color:var(--muted);line-height:1.8;max-width:600px;font-weight:300}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:8px;font-weight:600;font-size:.87rem;transition:.2s;border:none;font-family:'Inter',sans-serif;cursor:pointer}
+.btn-blue{background:var(--blue);color:#fff;width:100%;justify-content:center}.btn-blue:hover{background:var(--blue-l)}
+.page-hero{background:linear-gradient(135deg,#0f172a 0%,#1e3a8a 60%,#1d4ed8 100%);padding:72px 20px 80px;text-align:center;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 80%,rgba(56,189,248,.15) 0%,transparent 60%)}
+.page-hero-inner{position:relative;z-index:1;max-width:680px;margin:0 auto}
+.ph-crumb{font-size:.75rem;color:#94a3b8;margin-bottom:16px;display:flex;align-items:center;justify-content:center;gap:8px}
+.ph-crumb a{color:#7dd3fc}
+.page-hero h1{font-size:clamp(2rem,5vw,3.2rem);color:#fff;margin-bottom:14px;line-height:1.15}
+.page-hero p{font-size:.97rem;color:#94a3b8;line-height:1.8;font-weight:300}
+.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:48px;align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:16px}
+.ci-card{background:var(--blue-pale);border:1px solid var(--blue-mid);border-radius:12px;padding:22px 20px;display:flex;align-items:flex-start;gap:16px}
+.ci-icon{width:44px;height:44px;background:var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem}
+.ci-lbl{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.ci-val{font-size:.95rem;color:var(--slate);font-weight:500;line-height:1.5}
+.ci-val a{color:var(--blue)}.ci-val a:hover{text-decoration:underline}
+.form-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:36px 32px;box-shadow:0 4px 24px rgba(0,0,0,.06)}
+.form-title{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--slate);margin-bottom:6px}
+.form-sub{font-size:.85rem;color:var(--muted);margin-bottom:24px;line-height:1.6}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fg{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.fg label{font-size:.75rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--slate2)}
+.fg input,.fg select,.fg textarea{padding:11px 14px;border:1.5px solid var(--border);border-radius:8px;font-size:.88rem;font-family:'Inter',sans-serif;color:var(--slate);transition:.2s;outline:none;background:#fff}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.1)}
+.fg textarea{min-height:110px;resize:vertical}
+.fg input::placeholder,.fg textarea::placeholder{color:#94a3b8}
+/* POLICY */
+.policy-box{background:var(--blue-pale);border:1px solid var(--blue-mid);border-radius:12px;padding:32px 28px;border-top:3px solid var(--blue)}
+.policy-box h3{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--slate);margin-bottom:16px}
+.policy-box p{font-size:.88rem;color:var(--muted);line-height:1.8;margin-bottom:14px}
+.policy-box p:last-child{margin-bottom:0}
+.policy-box strong{color:var(--slate2)}
+.policy-box a{color:var(--blue)}.policy-box a:hover{text-decoration:underline}
+footer{background:#0f172a;padding:52px 0 24px}
+.foot-inner{max-width:1200px;margin:0 auto;padding:0 20px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.08)}
+.foot-name{font-family:'Playfair Display',serif;font-size:1.05rem;color:#fff;margin-bottom:10px}
+.foot-desc{font-size:.83rem;color:#475569;line-height:1.75;margin-bottom:16px}
+.foot-contact{display:flex;flex-direction:column;gap:7px}
+.foot-contact a,.foot-contact span{font-size:.82rem;color:#64748b;display:flex;align-items:center;gap:7px}
+.foot-contact a{color:#7dd3fc}.foot-contact a:hover{color:#fff}
+.foot-col h4{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#94a3b8;margin-bottom:14px}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.foot-col ul a{font-size:.83rem;color:#475569;transition:.2s}.foot-col ul a:hover{color:#7dd3fc}
+.foot-bottom{padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.foot-copy{font-size:.76rem;color:#334155}
+.made{background:rgba(37,99,235,.2);border:1px solid rgba(37,99,235,.35);color:#7dd3fc;font-size:.7rem;font-weight:700;padding:4px 12px;border-radius:20px}
+.success-msg{display:none;background:#dcfce7;border:1px solid #86efac;border-radius:8px;padding:16px;text-align:center;color:#166534;font-size:.9rem;font-weight:500;margin-top:12px}
+@media(max-width:900px){.nav-links{display:none}.burger{display:flex}.contact-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr 1fr;gap:24px}}
+@media(max-width:600px){section{padding:52px 0}.foot-grid{grid-template-columns:1fr}.form-card{padding:24px 20px}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="tb-left"><span>📍 20 E 7th Street, Manchester, OH 45144</span><span>✉️ <a href="mailto:sales@s-denterprises.com">sales@s-denterprises.com</a></span></div><a href="tel:9375493902" class="tb-phone topbar">☎ (937) 549-3902</a></div>
+<nav><div class="nav-inner"><a href="index.html" class="nav-brand"><div class="nav-logo">S&D</div><div><div class="nav-name">S & D & T Enterprises</div><div class="nav-sub">Manchester, Ohio · Est. 1970s</div></div></a>
+<ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="wooden.html">Wooden</a></li><li><a href="aluminum.html">Aluminum</a></li><li><a href="riker.html">Riker Boards</a></li><li><a href="lucite.html">Lucite</a></li><li><a href="contact.html" class="nav-cta active">Get a Quote</a></li></ul>
+<button class="burger" onclick="document.getElementById('mm').classList.toggle('open')"><span></span><span></span><span></span></button></div>
+<div class="mob-menu" id="mm"><a href="index.html">Home</a><a href="wooden.html">Wooden Cases</a><a href="aluminum.html">Aluminum Cases</a><a href="riker.html">Riker Boards</a><a href="lucite.html">Lucite & Stands</a><a href="contact.html" class="active" style="color:var(--blue);font-weight:600">Get a Quote</a></div></nav>
+
+<div class="page-hero"><div class="page-hero-inner"><div class="ph-crumb"><a href="index.html">Home</a> › Contact Us</div><h1>Get in Touch</h1><p>We're a small American business and we take every order personally. Call, email, or fill out the form below and we'll get back to you promptly.</p></div></div>
+
+<section><div class="container">
+<div class="contact-grid">
+  <div>
+    <div class="sec-lbl">Contact Information</div>
+    <h2 class="sec-title" style="margin-bottom:24px">Reach Us Directly</h2>
+    <div class="contact-info">
+      <div class="ci-card"><div class="ci-icon">📞</div><div><div class="ci-lbl">Phone</div><div class="ci-val"><a href="tel:9375493902">(937) 549-3902</a></div></div></div>
+      <div class="ci-card"><div class="ci-icon">📠</div><div><div class="ci-lbl">Fax</div><div class="ci-val">(937) 549-2709</div></div></div>
+      <div class="ci-card"><div class="ci-icon">✉️</div><div><div class="ci-lbl">Email</div><div class="ci-val"><a href="mailto:sales@s-denterprises.com">sales@s-denterprises.com</a></div></div></div>
+      <div class="ci-card"><div class="ci-icon">📍</div><div><div class="ci-lbl">Mailing Address</div><div class="ci-val">20 E 7th Street<br>Manchester, OH 45144-1308</div></div></div>
+      <div class="ci-card"><div class="ci-icon">↩️</div><div><div class="ci-lbl">Returns & Customer Service</div><div class="ci-val"><a href="tel:18776592604">1-877-659-2604</a><br><span style="font-size:.8rem;color:var(--muted)">Have invoice number ready</span></div></div></div>
+    </div>
+  </div>
+  <div class="form-card">
+    <div class="form-title">Request a Quote</div>
+    <p class="form-sub">Tell us what you're looking for — product type, size, quantity, and any special requirements — and we'll respond as soon as possible.</p>
+    <div class="form-row">
+      <div class="fg"><label>First Name</label><input type="text" placeholder="John"></div>
+      <div class="fg"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+    </div>
+    <div class="fg"><label>Email Address</label><input type="email" placeholder="john@example.com"></div>
+    <div class="fg"><label>Phone Number</label><input type="tel" placeholder="(555) 000-0000"></div>
+    <div class="fg"><label>Product Interest</label>
+      <select>
+        <option value="">Select a category...</option>
+        <option>Wooden Cases — Cherry, Walnut, or Oak</option>
+        <option>Aluminum Display Cases</option>
+        <option>Riker-Type Chipboards</option>
+        <option>Lucite & Acrylic Displays</option>
+        <option>Custom / Non-Standard Size</option>
+        <option>Blue Grass Cutlery</option>
+        <option>Other / General Question</option>
+      </select>
+    </div>
+    <div class="fg"><label>Message</label><textarea placeholder="Describe your display needs — size, quantity, intended use, any special requirements..."></textarea></div>
+    <button class="btn btn-blue" onclick="handleSubmit(event)">Send Message →</button>
+    <div class="success-msg" id="successMsg">✅ Thank you! We'll be in touch soon.</div>
+  </div>
+</div>
+</div></section>
+
+<section style="background:var(--blue-pale)" id="policy"><div class="container" style="max-width:800px">
+<div class="sec-lbl" style="text-align:center;display:block;margin-bottom:8px">Buyer Confidence</div>
+<h2 class="sec-title" style="text-align:center;margin-bottom:32px">Our Return Policy</h2>
+<div class="policy-box">
+  <h3>30-Day Full Refund Guarantee</h3>
+  <p>Product can be returned for <strong>100% credit refund</strong> if returned within 30 days of purchase without any obligation. Title and risk of loss does not pass to the customer until the 30-day period expires.</p>
+  <p>Products returned after 30 days will be charged a <strong>15% restocking fee</strong>. All returns must be in original packaging and are subject to inspection. No credit will be issued for product we determine cannot be resold. We pay return shipping only if items were shipped in error.</p>
+  <p>Any product shortage or shipping error must be reported to our Customer Service Department within <strong>48 hours of receipt</strong>. Each return requires a return authorization number — call <a href="tel:18776592604">1-877-659-2604</a> to obtain one. Have your invoice and date of purchase ready.</p>
+</div>
+</div></section>
+
+<footer><div class="foot-inner"><div class="foot-grid">
+<div><div class="foot-name">S & D & T Enterprises, INC.</div><p class="foot-desc">Handcrafted display cases made in Manchester, Ohio since the early 1970s.</p><div class="foot-contact"><a href="tel:9375493902">📞 (937) 549-3902</a><span>📠 (937) 549-2709</span><a href="mailto:sales@s-denterprises.com">✉️ sales@s-denterprises.com</a><span>📍 20 E 7th St, Manchester, OH 45144</span></div></div>
+<div class="foot-col"><h4>Products</h4><ul><li><a href="wooden.html">Wooden Cases</a></li><li><a href="aluminum.html">Aluminum Cases</a></li><li><a href="riker.html">Riker Chipboards</a></li><li><a href="lucite.html">Lucite & Stands</a></li></ul></div>
+<div class="foot-col"><h4>Company</h4><ul><li><a href="index.html">Home</a></li><li><a href="contact.html">Contact</a></li><li><a href="contact.html#policy">Return Policy</a></li></ul></div>
+<div class="foot-col"><h4>Get Help</h4><ul><li><a href="contact.html">Request a Quote</a></li><li><a href="tel:9375493902">Call Us</a></li><li><a href="mailto:sales@s-denterprises.com">Email Sales</a></li></ul></div>
+</div><div class="foot-bottom"><div class="foot-copy">© 2026 S & D & T Enterprises, INC. All rights reserved.</div><div class="made">🇺🇸 Made in USA</div></div></div></footer>
+
+<script>
+function handleSubmit(e){
+  e.preventDefault();
+  document.getElementById('successMsg').style.display='block';
+  e.target.style.display='none';
+}
+</script>
+</body></html>
