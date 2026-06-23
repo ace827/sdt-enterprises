@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Riker-Type Chipboard Displays | S & D & T Enterprises</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;color:#1e293b;background:#fff;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Playfair Display',serif}
+a{text-decoration:none;color:inherit}img{display:block;max-width:100%}
+:root{--blue:#2563eb;--blue-l:#3b82f6;--blue-pale:#eff6ff;--blue-mid:#dbeafe;--slate:#1e293b;--slate2:#334155;--muted:#64748b;--border:#e2e8f0}
+.topbar{background:#0f172a;color:#64748b;font-size:.78rem;padding:8px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.tb-left{display:flex;gap:18px;flex-wrap:wrap}.tb-left span{display:flex;align-items:center;gap:5px}
+.topbar a{color:#7dd3fc}.topbar a:hover{color:#fff}
+.tb-phone{background:var(--blue);color:#fff!important;padding:5px 14px;border-radius:4px;font-weight:600;font-size:.8rem}
+nav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 1px 8px rgba(0,0,0,.07)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-brand{display:flex;align-items:center;gap:11px}
+.nav-logo{background:var(--blue);color:#fff;width:40px;height:40px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:.95rem;flex-shrink:0}
+.nav-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--slate);line-height:1.15}
+.nav-sub{font-size:.65rem;color:var(--muted);}
+.nav-links{display:flex;gap:2px;list-style:none;align-items:center}
+.nav-links a{font-size:.83rem;font-weight:500;color:var(--slate2);padding:7px 12px;border-radius:6px;transition:.2s}
+.nav-links a:hover,.nav-links a.active{background:var(--blue-pale);color:var(--blue)}
+.nav-cta{background:var(--blue)!important;color:#fff!important;padding:8px 16px!important;border-radius:6px!important;font-weight:600!important}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.burger span{width:22px;height:2px;background:var(--slate);border-radius:2px;display:block}
+.mob-menu{display:none;background:#fff;border-top:1px solid var(--border);padding:10px 20px;flex-direction:column;gap:2px}
+.mob-menu a{display:block;padding:10px 12px;color:var(--slate2);font-size:.88rem;border-radius:6px}
+.mob-menu a:hover,.mob-menu a.active{background:var(--blue-pale);color:var(--blue)}
+.mob-menu.open{display:flex}
+section{padding:72px 0}.container{max-width:1200px;margin:0 auto;padding:0 20px}
+.sec-lbl{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+.sec-title{font-size:clamp(1.7rem,3vw,2.4rem);color:var(--slate);margin-bottom:12px;line-height:1.2}
+.sec-sub{font-size:.93rem;color:var(--muted);line-height:1.8;max-width:600px;font-weight:300}
+.sec-head{margin-bottom:48px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:8px;font-weight:600;font-size:.87rem;transition:.2s;border:none;font-family:'Inter',sans-serif}
+.btn-blue{background:var(--blue);color:#fff}.btn-blue:hover{background:var(--blue-l)}
+.btn-white{background:#fff;color:var(--blue)}.btn-white:hover{background:#dbeafe}
+.btn-outline-w{background:transparent;border:2px solid rgba(255,255,255,.45);color:#fff}.btn-outline-w:hover{background:rgba(255,255,255,.1)}
+.page-hero{background:linear-gradient(135deg,#0f172a 0%,#1e3a8a 60%,#1d4ed8 100%);padding:72px 20px 80px;text-align:center;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 80%,rgba(56,189,248,.15) 0%,transparent 60%)}
+.page-hero-inner{position:relative;z-index:1;max-width:680px;margin:0 auto}
+.ph-crumb{font-size:.75rem;color:#94a3b8;margin-bottom:16px;display:flex;align-items:center;justify-content:center;gap:8px}
+.ph-crumb a{color:#7dd3fc}
+.page-hero h1{font-size:clamp(2rem,5vw,3.2rem);color:#fff;margin-bottom:14px;line-height:1.15}
+.page-hero p{font-size:.97rem;color:#94a3b8;line-height:1.8;font-weight:300}
+.feat-bar{background:var(--blue);padding:20px}
+.feat-bar-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
+.fb-item{display:flex;align-items:center;gap:8px;font-size:.82rem;font-weight:500;color:#dbeafe}
+.use-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-bottom:48px}
+.use-card{background:var(--blue-pale);border:1px solid var(--blue-mid);border-radius:10px;padding:18px 16px;text-align:center}
+.use-card .icon{font-size:1.6rem;margin-bottom:8px}
+.use-card p{font-size:.82rem;font-weight:600;color:var(--slate);line-height:1.3}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.split img{width:100%;border-radius:12px;aspect-ratio:4/3;object-fit:cover}
+.feat-list{list-style:none;display:flex;flex-direction:column;gap:13px;margin:20px 0 28px}
+.feat-list li{display:flex;align-items:flex-start;gap:12px;font-size:.9rem;color:var(--slate2);line-height:1.6}
+.ck{width:20px;height:20px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;color:#fff;font-size:.7rem;font-weight:700}
+.table-wrap{overflow-x:auto;border-radius:10px;border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+thead th{background:var(--blue);color:#fff;padding:13px 16px;text-align:left;font-weight:600;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+tbody tr{border-bottom:1px solid var(--border)}
+tbody tr:hover{background:var(--blue-pale)}
+tbody td{padding:11px 16px;color:var(--slate2);line-height:1.4}
+tbody td:first-child{color:var(--blue);font-weight:600}
+.table-note{margin-top:14px;padding:14px 18px;background:var(--blue-pale);border-left:3px solid var(--blue);border-radius:4px;font-size:.84rem;color:var(--muted);line-height:1.65}
+.insert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.insert-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:20px}
+.insert-title{font-weight:700;font-size:.9rem;color:var(--slate);margin-bottom:6px}
+.insert-desc{font-size:.82rem;color:var(--muted);line-height:1.55}
+.cta{background:linear-gradient(135deg,var(--blue) 0%,#0ea5e9 100%);padding:64px 20px;text-align:center}
+.cta h2{font-size:clamp(1.7rem,3vw,2.4rem);color:#fff;margin-bottom:10px}
+.cta p{font-size:.95rem;color:#bfdbfe;margin-bottom:26px;line-height:1.75;max-width:520px;margin-left:auto;margin-right:auto}
+.cta-phone{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#fff;display:block;margin-bottom:20px}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+footer{background:#0f172a;padding:52px 0 24px}
+.foot-inner{max-width:1200px;margin:0 auto;padding:0 20px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.08)}
+.foot-name{font-family:'Playfair Display',serif;font-size:1.05rem;color:#fff;margin-bottom:10px}
+.foot-desc{font-size:.83rem;color:#475569;line-height:1.75;margin-bottom:16px}
+.foot-contact{display:flex;flex-direction:column;gap:7px}
+.foot-contact a,.foot-contact span{font-size:.82rem;color:#64748b;display:flex;align-items:center;gap:7px}
+.foot-contact a{color:#7dd3fc}.foot-contact a:hover{color:#fff}
+.foot-col h4{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#94a3b8;margin-bottom:14px}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.foot-col ul a{font-size:.83rem;color:#475569;transition:.2s}.foot-col ul a:hover{color:#7dd3fc}
+.foot-bottom{padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.foot-copy{font-size:.76rem;color:#334155}
+.made{background:rgba(37,99,235,.2);border:1px solid rgba(37,99,235,.35);color:#7dd3fc;font-size:.7rem;font-weight:700;padding:4px 12px;border-radius:20px}
+@media(max-width:900px){.nav-links{display:none}.burger{display:flex}.split{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr 1fr;gap:24px}.feat-bar-inner{gap:20px}}
+@media(max-width:600px){section{padding:52px 0}.foot-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="tb-left"><span>📍 20 E 7th Street, Manchester, OH 45144</span><span>✉️ <a href="mailto:sales@s-denterprises.com">sales@s-denterprises.com</a></span></div><a href="tel:9375493902" class="tb-phone topbar">☎ (937) 549-3902</a></div>
+<nav><div class="nav-inner"><a href="index.html" class="nav-brand"><div class="nav-logo">S&D</div><div><div class="nav-name">S & D & T Enterprises</div><div class="nav-sub">Manchester, Ohio · Est. 1970s</div></div></a>
+<ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="wooden.html">Wooden</a></li><li><a href="aluminum.html">Aluminum</a></li><li><a href="riker.html" class="active">Riker Boards</a></li><li><a href="lucite.html">Lucite</a></li><li><a href="contact.html" class="nav-cta">Get a Quote</a></li></ul>
+<button class="burger" onclick="document.getElementById('mm').classList.toggle('open')"><span></span><span></span><span></span></button></div>
+<div class="mob-menu" id="mm"><a href="index.html">Home</a><a href="wooden.html">Wooden Cases</a><a href="aluminum.html">Aluminum Cases</a><a href="riker.html" class="active">Riker Boards</a><a href="lucite.html">Lucite & Stands</a><a href="contact.html" style="color:var(--blue);font-weight:600">Get a Quote →</a></div></nav>
+
+<div class="page-hero"><div class="page-hero-inner"><div class="ph-crumb"><a href="index.html">Home</a> › Riker-Type Chipboards</div><h1>Riker-Type Chipboard Displays</h1><p>Glass-topped black chipboard cases with fine polyester filling. The collector's standard for coins, knives, jewelry, lighters, watches, and more. From Ruddles Mills Products.</p></div></div>
+
+<div class="feat-bar"><div class="feat-bar-inner"><div class="fb-item"><span>🔲</span> Glass-Topped Lid</div><div class="fb-item"><span>📌</span> Non-Rusting Pins</div><div class="fb-item"><span>🧶</span> Fine Polyester Filling</div><div class="fb-item"><span>🔄</span> Interchangeable Inserts</div><div class="fb-item"><span>🎨</span> 4 Insert Colors</div></div></div>
+
+<section><div class="container">
+<div class="sec-head"><div class="sec-lbl">What They're Used For</div><h2 class="sec-title">The Collector's Display Choice</h2><p class="sec-sub">Riker boards are used by collectors, dealers, and retailers to display almost anything small and precious.</p></div>
+<div class="use-grid">
+<div class="use-card"><div class="icon">🪙</div><p>Coins & Medals</p></div>
+<div class="use-card"><div class="icon">🗡️</div><p>Knives & Blades</p></div>
+<div class="use-card"><div class="icon">💍</div><p>Jewelry & Rings</p></div>
+<div class="use-card"><div class="icon">🔥</div><p>Zippo Lighters</p></div>
+<div class="use-card"><div class="icon">⌚</div><p>Watches & Bracelets</p></div>
+<div class="use-card"><div class="icon">📌</div><p>Pins & Patches</p></div>
+<div class="use-card"><div class="icon">💎</div><p>Gemstones</p></div>
+<div class="use-card"><div class="icon">📿</div><p>Earrings & Pendants</p></div>
+</div>
+<div class="split">
+<img src="https://images.unsplash.com/photo-1618354691792-d1d42acfd860?w=800&q=80" alt="Riker display case" loading="lazy">
+<div>
+<div class="sec-lbl">Construction Quality</div>
+<h2 class="sec-title">Built Better Than the Rest</h2>
+<p style="font-size:.92rem;color:var(--muted);line-height:1.8;margin-bottom:6px">Our riker-type chipboards from Ruddles Mills Products feature rugged extra-solid construction with fine polyester filling that eliminates sliding and keeps your items perfectly in place.</p>
+<ul class="feat-list">
+<li><span class="ck">✓</span><span>Glass-topped lid for clear, dust-free display</span></li>
+<li><span class="ck">✓</span><span>Extra heavy, plated, non-rusting pins</span></li>
+<li><span class="ck">✓</span><span>Pins run along display's longest side</span></li>
+<li><span class="ck">✓</span><span>Easily removable pins and lid for item access</span></li>
+<li><span class="ck">✓</span><span>Fine polyester filling prevents sliding</span></li>
+<li><span class="ck">✓</span><span>Available in wide selection of sizes</span></li>
+</ul>
+<a href="contact.html" class="btn btn-blue">Order Now →</a>
+</div></div>
+</div></section>
+
+<section style="background:var(--blue-pale)"><div class="container">
+<div class="sec-head"><div class="sec-lbl">Sizes</div><h2 class="sec-title">Standard Chipboard Sizes</h2></div>
+<div class="table-wrap"><table><thead><tr><th>Model</th><th>Dimensions</th><th>Depth</th><th>Insert Options</th></tr></thead>
+<tbody>
+<tr><td>120 BK</td><td>4¼" × 3¼"</td><td>¾"</td><td>Standard (no inserts)</td></tr>
+<tr><td>130 BK</td><td>5½" × 4½"</td><td>¾"</td><td>Standard</td></tr>
+<tr><td>135 BK</td><td>6" × 5"</td><td>¾"</td><td>Standard</td></tr>
+<tr><td>140 BK</td><td>8" × 6"</td><td>¾"</td><td>Standard</td></tr>
+<tr><td>150 BK</td><td>12" × 8"</td><td>¾"</td><td>Standard</td></tr>
+<tr><td>160 BK / BKI</td><td>16" × 12"</td><td>¾"</td><td>12, 20, or 35 slot inserts available</td></tr>
+<tr><td>190 BK</td><td>20" × 14"</td><td>¾"</td><td>Standard</td></tr>
+<tr><td>260 BKI</td><td>14½" × 7¾"</td><td>1"</td><td>10, 18, 20, 24, 26, 32, 50 slot; ring; bracelet; earring trays</td></tr>
+<tr><td>260 LC</td><td>14½" × 7¾"</td><td>1"</td><td>24, 36, or 50 lucite cups</td></tr>
+</tbody></table></div>
+<div class="table-note"><strong>Insert colors:</strong> Red, blue, black, or gray — please specify when ordering. Inserts purchased in quantities of 12, minimum 3 per style/color. <strong>The Insert System:</strong> buy empty 160E, 260E, or 270E boards and add any insert combination for unlimited flexibility.</div>
+</div></section>
+
+<section><div class="container">
+<div class="sec-head"><div class="sec-lbl">Insert Trays</div><h2 class="sec-title">Available Insert Configurations</h2><p class="sec-sub">Mix and match insert trays to build the perfect display for your specific collection.</p></div>
+<div class="insert-grid">
+<div class="insert-card"><div class="insert-title">FT 10a — Watch/Bracelet</div><p class="insert-desc">10 slots, each 7¼" × 2½". Ideal for watches and wide bracelets.</p></div>
+<div class="insert-card"><div class="insert-title">FT 10 — General</div><p class="insert-desc">10 sections, each 3½" × 2½". Versatile for many small collectibles.</p></div>
+<div class="insert-card"><div class="insert-title">FT 18 — Medium Slots</div><p class="insert-desc">18 sections, each 2¼" × 2¼". Great for coins, patches, and small items.</p></div>
+<div class="insert-card"><div class="insert-title">FT 18a — Coin Cards</div><p class="insert-desc">18 sections, each 7¼" × 2½". For coin cards, earring cards, matchbooks.</p></div>
+<div class="insert-card"><div class="insert-title">FT 20 — Zippo Lighters</div><p class="insert-desc">20 sections, each 2½" × ⅝". Holds 20 standard Zippo lighters perfectly.</p></div>
+<div class="insert-card"><div class="insert-title">FT 24 — Small Items</div><p class="insert-desc">24 sections, each 2" × 1½". Compact items, small coins, gems.</p></div>
+<div class="insert-card"><div class="insert-title">FT 32 / FT 36 / FT 50</div><p class="insert-desc">32, 36, or 50 tiny sections for the smallest collectibles and jewelry pieces.</p></div>
+<div class="insert-card"><div class="insert-title">Ring Pads</div><p class="insert-desc">72 slots, 14¼" × 7¾". The dedicated solution for ring collections.</p></div>
+</div>
+</div></section>
+
+<section class="cta"><div class="container">
+<h2>Build the Perfect Collector's Display</h2>
+<p>Contact us to discuss insert combinations, quantities, and pricing for your riker board order.</p>
+<a href="tel:9375493902" class="cta-phone">(937) 549-3902</a>
+<div class="cta-btns"><a href="mailto:sales@s-denterprises.com" class="btn btn-white">Email Sales</a><a href="contact.html" class="btn btn-outline-w">Request a Quote</a></div>
+</div></section>
+
+<footer><div class="foot-inner"><div class="foot-grid">
+<div><div class="foot-name">S & D & T Enterprises, INC.</div><p class="foot-desc">Handcrafted display cases made in Manchester, Ohio since the early 1970s.</p><div class="foot-contact"><a href="tel:9375493902">📞 (937) 549-3902</a><span>📠 (937) 549-2709</span><a href="mailto:sales@s-denterprises.com">✉️ sales@s-denterprises.com</a><span>📍 20 E 7th St, Manchester, OH 45144</span></div></div>
+<div class="foot-col"><h4>Products</h4><ul><li><a href="wooden.html">Wooden Cases</a></li><li><a href="aluminum.html">Aluminum Cases</a></li><li><a href="riker.html">Riker Chipboards</a></li><li><a href="lucite.html">Lucite & Stands</a></li></ul></div>
+<div class="foot-col"><h4>Company</h4><ul><li><a href="index.html">Home</a></li><li><a href="contact.html">Contact</a></li><li><a href="contact.html#policy">Return Policy</a></li></ul></div>
+<div class="foot-col"><h4>Get Help</h4><ul><li><a href="contact.html">Request a Quote</a></li><li><a href="tel:9375493902">Call Us</a></li></ul></div>
+</div><div class="foot-bottom"><div class="foot-copy">© 2026 S & D & T Enterprises, INC. All rights reserved.</div><div class="made">🇺🇸 Made in USA</div></div></div></footer>
+</body></html>
