@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucite & Acrylic Displays | S & D & T Enterprises</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;color:#1e293b;background:#fff;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Playfair Display',serif}
+a{text-decoration:none;color:inherit}img{display:block;max-width:100%}
+:root{--blue:#2563eb;--blue-l:#3b82f6;--blue-pale:#eff6ff;--blue-mid:#dbeafe;--slate:#1e293b;--slate2:#334155;--muted:#64748b;--border:#e2e8f0}
+.topbar{background:#0f172a;color:#64748b;font-size:.78rem;padding:8px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.tb-left{display:flex;gap:18px;flex-wrap:wrap}.tb-left span{display:flex;align-items:center;gap:5px}
+.topbar a{color:#7dd3fc}.topbar a:hover{color:#fff}
+.tb-phone{background:var(--blue);color:#fff!important;padding:5px 14px;border-radius:4px;font-weight:600;font-size:.8rem}
+nav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 1px 8px rgba(0,0,0,.07)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-brand{display:flex;align-items:center;gap:11px}
+.nav-logo{background:var(--blue);color:#fff;width:40px;height:40px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:.95rem;flex-shrink:0}
+.nav-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--slate);line-height:1.15}
+.nav-sub{font-size:.65rem;color:var(--muted);}
+.nav-links{display:flex;gap:2px;list-style:none;align-items:center}
+.nav-links a{font-size:.83rem;font-weight:500;color:var(--slate2);padding:7px 12px;border-radius:6px;transition:.2s}
+.nav-links a:hover,.nav-links a.active{background:var(--blue-pale);color:var(--blue)}
+.nav-cta{background:var(--blue)!important;color:#fff!important;padding:8px 16px!important;border-radius:6px!important;font-weight:600!important}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.burger span{width:22px;height:2px;background:var(--slate);border-radius:2px;display:block}
+.mob-menu{display:none;background:#fff;border-top:1px solid var(--border);padding:10px 20px;flex-direction:column;gap:2px}
+.mob-menu a{display:block;padding:10px 12px;color:var(--slate2);font-size:.88rem;border-radius:6px}
+.mob-menu a:hover,.mob-menu a.active{background:var(--blue-pale);color:var(--blue)}
+.mob-menu.open{display:flex}
+section{padding:72px 0}.container{max-width:1200px;margin:0 auto;padding:0 20px}
+.sec-lbl{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+.sec-title{font-size:clamp(1.7rem,3vw,2.4rem);color:var(--slate);margin-bottom:12px;line-height:1.2}
+.sec-sub{font-size:.93rem;color:var(--muted);line-height:1.8;max-width:600px;font-weight:300}
+.sec-head{margin-bottom:48px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:8px;font-weight:600;font-size:.87rem;transition:.2s;border:none;font-family:'Inter',sans-serif}
+.btn-blue{background:var(--blue);color:#fff}.btn-blue:hover{background:var(--blue-l)}
+.btn-white{background:#fff;color:var(--blue)}.btn-white:hover{background:#dbeafe}
+.btn-outline-w{background:transparent;border:2px solid rgba(255,255,255,.45);color:#fff}.btn-outline-w:hover{background:rgba(255,255,255,.1)}
+.page-hero{background:linear-gradient(135deg,#0f172a 0%,#1e3a8a 60%,#1d4ed8 100%);padding:72px 20px 80px;text-align:center;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 80%,rgba(56,189,248,.15) 0%,transparent 60%)}
+.page-hero-inner{position:relative;z-index:1;max-width:680px;margin:0 auto}
+.ph-crumb{font-size:.75rem;color:#94a3b8;margin-bottom:16px;display:flex;align-items:center;justify-content:center;gap:8px}
+.ph-crumb a{color:#7dd3fc}
+.page-hero h1{font-size:clamp(2rem,5vw,3.2rem);color:#fff;margin-bottom:14px;line-height:1.15}
+.page-hero p{font-size:.97rem;color:#94a3b8;line-height:1.8;font-weight:300}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.cat-card{background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:.2s;border-top:3px solid var(--blue)}
+.cat-card:hover{box-shadow:0 10px 32px rgba(37,99,235,.12);transform:translateY(-3px)}
+.cat-img{width:100%;height:180px;object-fit:cover;background:var(--blue-pale)}
+.cat-body{padding:22px}
+.cat-title{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--slate);margin-bottom:8px}
+.cat-items{list-style:none;display:flex;flex-direction:column;gap:5px}
+.cat-items li{font-size:.83rem;color:var(--muted);display:flex;align-items:center;gap:8px}
+.cat-items li::before{content:'·';color:var(--blue);font-size:1.2rem;line-height:1}
+.table-wrap{overflow-x:auto;border-radius:10px;border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+thead th{background:var(--blue);color:#fff;padding:13px 16px;text-align:left;font-weight:600;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+tbody tr{border-bottom:1px solid var(--border)}
+tbody tr:hover{background:var(--blue-pale)}
+tbody td{padding:11px 16px;color:var(--slate2);line-height:1.4}
+tbody td:first-child{color:var(--blue);font-weight:600}
+.na{color:#94a3b8;font-style:italic;font-size:.8rem}
+.table-note{margin-top:14px;padding:14px 18px;background:var(--blue-pale);border-left:3px solid var(--blue);border-radius:4px;font-size:.84rem;color:var(--muted);line-height:1.65}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.split img{width:100%;border-radius:12px;aspect-ratio:4/3;object-fit:cover}
+.cta{background:linear-gradient(135deg,var(--blue) 0%,#0ea5e9 100%);padding:64px 20px;text-align:center}
+.cta h2{font-size:clamp(1.7rem,3vw,2.4rem);color:#fff;margin-bottom:10px}
+.cta p{font-size:.95rem;color:#bfdbfe;margin-bottom:26px;line-height:1.75;max-width:520px;margin-left:auto;margin-right:auto}
+.cta-phone{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#fff;display:block;margin-bottom:20px}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+footer{background:#0f172a;padding:52px 0 24px}
+.foot-inner{max-width:1200px;margin:0 auto;padding:0 20px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.08)}
+.foot-name{font-family:'Playfair Display',serif;font-size:1.05rem;color:#fff;margin-bottom:10px}
+.foot-desc{font-size:.83rem;color:#475569;line-height:1.75;margin-bottom:16px}
+.foot-contact{display:flex;flex-direction:column;gap:7px}
+.foot-contact a,.foot-contact span{font-size:.82rem;color:#64748b;display:flex;align-items:center;gap:7px}
+.foot-contact a{color:#7dd3fc}.foot-contact a:hover{color:#fff}
+.foot-col h4{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#94a3b8;margin-bottom:14px}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.foot-col ul a{font-size:.83rem;color:#475569;transition:.2s}.foot-col ul a:hover{color:#7dd3fc}
+.foot-bottom{padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.foot-copy{font-size:.76rem;color:#334155}
+.made{background:rgba(37,99,235,.2);border:1px solid rgba(37,99,235,.35);color:#7dd3fc;font-size:.7rem;font-weight:700;padding:4px 12px;border-radius:20px}
+@media(max-width:900px){.nav-links{display:none}.burger{display:flex}.split{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr 1fr;gap:24px}}
+@media(max-width:600px){section{padding:52px 0}.foot-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="tb-left"><span>📍 20 E 7th Street, Manchester, OH 45144</span><span>✉️ <a href="mailto:sales@s-denterprises.com">sales@s-denterprises.com</a></span></div><a href="tel:9375493902" class="tb-phone topbar">☎ (937) 549-3902</a></div>
+<nav><div class="nav-inner"><a href="index.html" class="nav-brand"><div class="nav-logo">S&D</div><div><div class="nav-name">S & D & T Enterprises</div><div class="nav-sub">Manchester, Ohio · Est. 1970s</div></div></a>
+<ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="wooden.html">Wooden</a></li><li><a href="aluminum.html">Aluminum</a></li><li><a href="riker.html">Riker Boards</a></li><li><a href="lucite.html" class="active">Lucite</a></li><li><a href="contact.html" class="nav-cta">Get a Quote</a></li></ul>
+<button class="burger" onclick="document.getElementById('mm').classList.toggle('open')"><span></span><span></span><span></span></button></div>
+<div class="mob-menu" id="mm"><a href="index.html">Home</a><a href="wooden.html">Wooden Cases</a><a href="aluminum.html">Aluminum Cases</a><a href="riker.html">Riker Boards</a><a href="lucite.html" class="active">Lucite & Stands</a><a href="contact.html" style="color:var(--blue);font-weight:600">Get a Quote →</a></div></nav>
+
+<div class="page-hero"><div class="page-hero-inner"><div class="ph-crumb"><a href="index.html">Home</a> › Lucite & Acrylic Displays</div><h1>Lucite Displays & Stands</h1><p>Crystal-clear acrylic stands, easels, risers, glass domes, sword stands, and display boxes. Perfect for store windows, home display, and retail merchandising.</p></div></div>
+
+<section><div class="container">
+<div class="sec-head"><div class="sec-lbl">Product Categories</div><h2 class="sec-title">Everything You Need to Elevate Your Display</h2><p class="sec-sub">Clear acrylic lucite stands bring collectibles to life. From small easels to full sword and rifle stands — we have the right riser for every item.</p></div>
+<div class="cat-grid">
+  <div class="cat-card">
+    <img class="cat-img" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80" alt="Acrylic easels" loading="lazy">
+    <div class="cat-body"><div class="cat-title">Easels & Stands</div>
+    <ul class="cat-items">
+      <li>Standard acrylic easels (5 sizes: 35A through 40)</li>
+      <li>Double-bend easels — 5 sizes, up to 12" high</li>
+      <li>Label easels — 4½" and 6" heights</li>
+      <li>Sword stands — single and double configurations</li>
+      <li>Hat/helmet stands — 6" and 10"</li>
+      <li>Pistol stand & short/tall rifle stands</li>
+    </ul></div>
+  </div>
+  <div class="cat-card">
+    <img class="cat-img" src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=600&q=80" alt="Lucite risers and boxes" loading="lazy">
+    <div class="cat-body"><div class="cat-title">Risers & Box Cases</div>
+    <ul class="cat-items">
+      <li>Square risers — 2", 4" heights</li>
+      <li>Rectangular risers — R2L, R3S, R4S, R4T styles</li>
+      <li>Glass domes with wood bases — 4 sizes (4½" to 12" high)</li>
+      <li>Lucite box cases with wood bases — 4 sizes</li>
+      <li>Rectangle lucite boxes with wood bases — 5 sizes</li>
+      <li>Marble lucite stand option for glass dome MBL1</li>
+    </ul></div>
+  </div>
+  <div class="cat-card">
+    <img class="cat-img" src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?w=600&q=80" alt="Display accessories" loading="lazy">
+    <div class="cat-body"><div class="cat-title">Accessories</div>
+    <ul class="cat-items">
+      <li>Bannerstone display (model 6203)</li>
+      <li>Available in clear acrylic only</li>
+      <li>Works with all riker and wooden cases</li>
+      <li>Ideal for store windows and retail shelving</li>
+      <li>Home display and office collector setups</li>
+      <li>Contact us for current availability</li>
+    </ul></div>
+  </div>
+</div>
+</div></section>
+
+<section style="background:var(--blue-pale)"><div class="container">
+<div class="sec-head"><div class="sec-lbl">Full Size Reference</div><h2 class="sec-title">Lucite Item Specifications</h2></div>
+<div class="table-wrap"><table><thead><tr><th>Item</th><th>Model(s)</th><th>Dimensions</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Standard Easels</td><td>35A, 35B, 38, 39, 40</td><td>1¾" to 5¾" high</td><td>5 sizes</td></tr>
+<tr><td>Double-Bend Easels</td><td>GE3, GE4.5, GE7.5, GE9, GE12</td><td>3" to 12" high</td><td>5 sizes</td></tr>
+<tr><td>Label Easels</td><td>KG4.5, KG6</td><td>4½" and 6" high</td><td>2 sizes</td></tr>
+<tr><td>Sword Stand (single)</td><td>1 SWD</td><td>—</td><td>For 1 sword & sheath</td></tr>
+<tr><td>Sword Stand (double)</td><td>2 SWD</td><td>—</td><td>For 2 swords & sheaths</td></tr>
+<tr><td>Hat/Helmet Stands</td><td>HS1</td><td>6" and 10"</td><td>2 sizes</td></tr>
+<tr><td>Pistol Stand</td><td>—</td><td>Standard</td><td>—</td></tr>
+<tr><td>Rifle Stand — Short</td><td>—</td><td>Short height</td><td>—</td></tr>
+<tr><td>Rifle Stand — Tall</td><td>—</td><td>Tall height</td><td>—</td></tr>
+<tr><td>Square Risers</td><td>R2, R4</td><td>2"×2"×2" / 4"×4"×4"</td><td>—</td></tr>
+<tr><td>Rect. Risers</td><td>R2L, R4T, R3S, R4S</td><td>Various</td><td>4 styles</td></tr>
+<tr><td>Glass Dome — Small</td><td>DM1</td><td>4½" high × 3" wide</td><td>Wood base</td></tr>
+<tr><td>Glass Dome — Medium</td><td>DM2</td><td>7½" high × 4" wide</td><td>Wood base</td></tr>
+<tr><td>Glass Dome — Large</td><td>DM3</td><td>10½" high × 5½" wide</td><td>Wood base</td></tr>
+<tr><td>Glass Dome — XL</td><td>DM4</td><td>12" high × 8" wide</td><td>Wood base</td></tr>
+<tr><td>Marble Lucite Dome</td><td>MBL1</td><td>7½" × 4"</td><td>Marble lucite stand</td></tr>
+<tr><td>Lucite Box Case</td><td>CJ1W</td><td>6½" h × 6" w × 4" d</td><td>Wood base</td></tr>
+<tr><td>Lucite Box Case</td><td>CJ2W</td><td>8½" h × 8" w × 8" d</td><td>Wood base</td></tr>
+<tr><td>Lucite Box Case</td><td>CJ4W</td><td>12½" h × 12" w × 12" d</td><td>Wood base</td></tr>
+<tr><td>Lucite Box Case</td><td>CJ45W</td><td>18½" h × 12" w × 12" d</td><td>Wood base</td></tr>
+<tr><td>Rect. Box (small)</td><td>LRB9W</td><td>3½" h × 9" w × 3½" d</td><td>Wood base</td></tr>
+<tr><td>Rect. Box (medium)</td><td>LRB10W</td><td>5½" h × 10" w × 5" d</td><td>Wood base</td></tr>
+<tr><td>Rect. Box (large)</td><td>LRB612W / LRB816W / LRB920W</td><td>Up to 9½" h × 20" w × 12" d</td><td>Wood base</td></tr>
+</tbody></table></div>
+<div class="table-note">⚠️ <strong>Availability note:</strong> Wire easels, ribbon easels, sign holders, sphere holders/rings, plastic stackable trays, leatherette trays, and glass top hinged cases are <strong>currently unavailable</strong>. Contact us for the latest availability on any item.</div>
+</div></section>
+
+<section><div class="container"><div class="split">
+<img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Display stands in use" loading="lazy">
+<div>
+<div class="sec-lbl">Perfect For</div>
+<h2 class="sec-title">Where Lucite Displays Shine</h2>
+<p style="font-size:.92rem;color:var(--muted);line-height:1.8;margin-bottom:20px">Clear acrylic lets your collectibles speak for themselves. No distracting frames or colors — just clean, modern presentation that works in any setting.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+<div style="background:var(--blue-pale);border:1px solid var(--blue-mid);border-radius:8px;padding:16px;font-size:.85rem;color:var(--slate2)"><strong>🏪 Retail</strong><br>Store windows, countertop displays, product merchandising</div>
+<div style="background:var(--blue-pale);border:1px solid var(--blue-mid);border-radius:8px;padding:16px;font-size:.85rem;color:var(--slate2)"><strong>🏠 Home</strong><br>Living room shelves, office displays, trophy cases</div>
+<div style="background:var(--blue-pale);border:1px solid var(--blue-mid);border-radius:8px;padding:16px;font-size:.85rem;color:var(--slate2)"><strong>🎪 Shows</strong><br>Dealer tables, collector shows, trade exhibitions</div>
+<div style="background:var(--blue-pale);border:1px solid var(--blue-mid);border-radius:8px;padding:16px;font-size:.85rem;color:var(--slate2)"><strong>🗡️ Weapons</strong><br>Sword, knife, pistol, and rifle display stands</div>
+</div>
+<div style="margin-top:24px"><a href="contact.html" class="btn btn-blue">Inquire About Lucite Items →</a></div>
+</div></div></div></section>
+
+<section class="cta"><div class="container">
+<h2>Not Sure What You Need?</h2>
+<p>Give us a call and describe what you're trying to display. We'll help you find the right stand or case for the job.</p>
+<a href="tel:9375493902" class="cta-phone">(937) 549-3902</a>
+<div class="cta-btns"><a href="mailto:sales@s-denterprises.com" class="btn btn-white">Email Sales</a><a href="contact.html" class="btn btn-outline-w">Request a Quote</a></div>
+</div></section>
+
+<footer><div class="foot-inner"><div class="foot-grid">
+<div><div class="foot-name">S & D & T Enterprises, INC.</div><p class="foot-desc">Handcrafted display cases made in Manchester, Ohio since the early 1970s.</p><div class="foot-contact"><a href="tel:9375493902">📞 (937) 549-3902</a><span>📠 (937) 549-2709</span><a href="mailto:sales@s-denterprises.com">✉️ sales@s-denterprises.com</a><span>📍 20 E 7th St, Manchester, OH 45144</span></div></div>
+<div class="foot-col"><h4>Products</h4><ul><li><a href="wooden.html">Wooden Cases</a></li><li><a href="aluminum.html">Aluminum Cases</a></li><li><a href="riker.html">Riker Chipboards</a></li><li><a href="lucite.html">Lucite & Stands</a></li></ul></div>
+<div class="foot-col"><h4>Company</h4><ul><li><a href="index.html">Home</a></li><li><a href="contact.html">Contact</a></li><li><a href="contact.html#policy">Return Policy</a></li></ul></div>
+<div class="foot-col"><h4>Get Help</h4><ul><li><a href="contact.html">Request a Quote</a></li><li><a href="tel:9375493902">Call Us</a></li></ul></div>
+</div><div class="foot-bottom"><div class="foot-copy">© 2026 S & D & T Enterprises, INC. All rights reserved.</div><div class="made">🇺🇸 Made in USA</div></div></div></footer>
+</body></html>
