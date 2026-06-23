@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wooden Display Cases — Cherry, Walnut & Oak | S & D & T Enterprises</title>
+<meta name="description" content="Solid cherry, walnut and oak wooden display cases handcrafted in Manchester, Ohio. Brass hinges, velveteen inlay, custom sizes available.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:#1e293b;background:#fff;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Playfair Display',serif}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+:root{--blue:#2563eb;--blue-l:#3b82f6;--blue-pale:#eff6ff;--blue-mid:#dbeafe;--slate:#1e293b;--slate2:#334155;--muted:#64748b;--border:#e2e8f0}
+.topbar{background:#0f172a;color:#64748b;font-size:.78rem;padding:8px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.tb-left{display:flex;gap:18px;flex-wrap:wrap}
+.tb-left span{display:flex;align-items:center;gap:5px}
+.topbar a{color:#7dd3fc}.topbar a:hover{color:#fff}
+.tb-phone{background:var(--blue);color:#fff!important;padding:5px 14px;border-radius:4px;font-weight:600;font-size:.8rem}
+nav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 1px 8px rgba(0,0,0,.07)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-brand{display:flex;align-items:center;gap:11px}
+.nav-logo{background:var(--blue);color:#fff;width:40px;height:40px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:.95rem;flex-shrink:0}
+.nav-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--slate);line-height:1.15}
+.nav-sub{font-size:.65rem;color:var(--muted);letter-spacing:.04em}
+.nav-links{display:flex;gap:2px;list-style:none;align-items:center}
+.nav-links a{font-size:.83rem;font-weight:500;color:var(--slate2);padding:7px 12px;border-radius:6px;transition:.2s}
+.nav-links a:hover,.nav-links a.active{background:var(--blue-pale);color:var(--blue)}
+.nav-cta{background:var(--blue)!important;color:#fff!important;padding:8px 16px!important;border-radius:6px!important;font-weight:600!important}
+.nav-cta:hover{background:var(--blue-l)!important}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.burger span{width:22px;height:2px;background:var(--slate);border-radius:2px;display:block}
+.mob-menu{display:none;background:#fff;border-top:1px solid var(--border);padding:10px 20px;flex-direction:column;gap:2px}
+.mob-menu a{display:block;padding:10px 12px;color:var(--slate2);font-size:.88rem;border-radius:6px}
+.mob-menu a:hover,.mob-menu a.active{background:var(--blue-pale);color:var(--blue)}
+.mob-menu.open{display:flex}
+section{padding:72px 0}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+.sec-lbl{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+.sec-title{font-size:clamp(1.7rem,3vw,2.4rem);color:var(--slate);margin-bottom:12px;line-height:1.2}
+.sec-sub{font-size:.93rem;color:var(--muted);line-height:1.8;max-width:600px;font-weight:300}
+.sec-head{margin-bottom:48px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:8px;font-weight:600;font-size:.87rem;transition:.2s;border:none;font-family:'Inter',sans-serif}
+.btn-blue{background:var(--blue);color:#fff}.btn-blue:hover{background:var(--blue-l)}
+.btn-white{background:#fff;color:var(--blue)}.btn-white:hover{background:#dbeafe}
+.btn-outline-w{background:transparent;border:2px solid rgba(255,255,255,.45);color:#fff}.btn-outline-w:hover{background:rgba(255,255,255,.1)}
+
+/* PAGE HERO */
+.page-hero{background:linear-gradient(135deg,#0f172a 0%,#1e3a8a 60%,#1d4ed8 100%);padding:72px 20px 80px;text-align:center;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 80%,rgba(56,189,248,.15) 0%,transparent 60%)}
+.page-hero-inner{position:relative;z-index:1;max-width:680px;margin:0 auto}
+.ph-crumb{font-size:.75rem;color:#94a3b8;margin-bottom:16px;display:flex;align-items:center;justify-content:center;gap:8px}
+.ph-crumb a{color:#7dd3fc}.ph-crumb a:hover{color:#fff}
+.page-hero h1{font-size:clamp(2rem,5vw,3.2rem);color:#fff;margin-bottom:14px;line-height:1.15}
+.page-hero p{font-size:.97rem;color:#94a3b8;line-height:1.8;font-weight:300}
+
+/* FEATURES BAR */
+.feat-bar{background:var(--blue);padding:20px}
+.feat-bar-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
+.fb-item{display:flex;align-items:center;gap:8px;font-size:.82rem;font-weight:500;color:#dbeafe}
+.fb-item span{font-size:1rem}
+
+/* SPECIES CARDS */
+.species-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:60px}
+.sp-card{border-radius:12px;overflow:hidden;border:1px solid var(--border);transition:.2s}
+.sp-card:hover{box-shadow:0 10px 30px rgba(37,99,235,.12);transform:translateY(-3px)}
+.sp-img{width:100%;height:200px;object-fit:cover}
+.sp-body{padding:22px}
+.sp-name{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--slate);margin-bottom:6px}
+.sp-desc{font-size:.85rem;color:var(--muted);line-height:1.65}
+
+/* FEATURES GRID */
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:40px}
+.feat-item{background:var(--blue-pale);border:1px solid var(--blue-mid);border-radius:10px;padding:20px;display:flex;align-items:flex-start;gap:12px}
+.feat-icon{font-size:1.3rem;flex-shrink:0;margin-top:2px}
+.feat-text{font-size:.85rem;color:var(--slate2);line-height:1.55;font-weight:500}
+
+/* TABLE */
+.table-wrap{overflow-x:auto;border-radius:10px;border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+thead th{background:var(--blue);color:#fff;padding:13px 16px;text-align:left;font-weight:600;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+tbody tr{border-bottom:1px solid var(--border)}
+tbody tr:hover{background:var(--blue-pale)}
+tbody td{padding:11px 16px;color:var(--slate2);line-height:1.4}
+tbody td:first-child{color:var(--blue);font-weight:600;font-size:.8rem}
+.table-note{margin-top:14px;padding:14px 18px;background:var(--blue-pale);border-left:3px solid var(--blue);border-radius:4px;font-size:.84rem;color:var(--muted);line-height:1.65}
+
+/* VELVET SECTION */
+.velvet-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.velvet-img{width:100%;border-radius:12px;aspect-ratio:4/3;object-fit:cover}
+.color-dots{display:flex;gap:10px;margin:16px 0}
+.dot{width:32px;height:32px;border-radius:50%;border:2px solid var(--border)}
+
+/* CTA */
+.cta{background:linear-gradient(135deg,var(--blue) 0%,#0ea5e9 100%);padding:64px 20px;text-align:center}
+.cta h2{font-size:clamp(1.7rem,3vw,2.4rem);color:#fff;margin-bottom:10px}
+.cta p{font-size:.95rem;color:#bfdbfe;margin-bottom:26px;line-height:1.75;max-width:520px;margin-left:auto;margin-right:auto}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cta-phone{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#fff;display:block;margin-bottom:20px}
+
+footer{background:#0f172a;padding:52px 0 24px}
+.foot-inner{max-width:1200px;margin:0 auto;padding:0 20px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.08)}
+.foot-name{font-family:'Playfair Display',serif;font-size:1.05rem;color:#fff;margin-bottom:10px}
+.foot-desc{font-size:.83rem;color:#475569;line-height:1.75;margin-bottom:16px}
+.foot-contact{display:flex;flex-direction:column;gap:7px}
+.foot-contact a,.foot-contact span{font-size:.82rem;color:#64748b;display:flex;align-items:center;gap:7px}
+.foot-contact a{color:#7dd3fc}.foot-contact a:hover{color:#fff}
+.foot-col h4{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#94a3b8;margin-bottom:14px}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.foot-col ul a{font-size:.83rem;color:#475569;transition:.2s}
+.foot-col ul a:hover{color:#7dd3fc}
+.foot-bottom{padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.foot-copy{font-size:.76rem;color:#334155}
+.made{background:rgba(37,99,235,.2);border:1px solid rgba(37,99,235,.35);color:#7dd3fc;font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:4px 12px;border-radius:20px}
+
+@media(max-width:900px){
+  .nav-links{display:none}
+  .burger{display:flex}
+  .species-grid{grid-template-columns:1fr}
+  .velvet-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:24px}
+  .feat-bar-inner{gap:20px}
+}
+@media(max-width:600px){
+  section{padding:52px 0}
+  .foot-grid{grid-template-columns:1fr}
+  .feat-bar-inner{flex-direction:column;align-items:flex-start;gap:12px}
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="tb-left"><span>📍 20 E 7th Street, Manchester, OH 45144</span><span>✉️ <a href="mailto:sales@s-denterprises.com">sales@s-denterprises.com</a></span></div>
+  <a href="tel:9375493902" class="tb-phone topbar">☎ (937) 549-3902</a>
+</div>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <div class="nav-logo">S&D</div>
+      <div><div class="nav-name">S & D & T Enterprises</div><div class="nav-sub">Manchester, Ohio · Est. 1970s</div></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="wooden.html" class="active">Wooden</a></li>
+      <li><a href="aluminum.html">Aluminum</a></li>
+      <li><a href="riker.html">Riker Boards</a></li>
+      <li><a href="lucite.html">Lucite</a></li>
+      <li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
+    </ul>
+    <button class="burger" onclick="document.getElementById('mm').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mob-menu" id="mm">
+    <a href="index.html">Home</a>
+    <a href="wooden.html" class="active">Wooden Cases</a>
+    <a href="aluminum.html">Aluminum Cases</a>
+    <a href="riker.html">Riker Boards</a>
+    <a href="lucite.html">Lucite & Stands</a>
+    <a href="contact.html" style="color:var(--blue);font-weight:600">Get a Quote →</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="ph-crumb"><a href="index.html">Home</a> › Wooden Display Cases</div>
+    <h1>Wooden Display Cases</h1>
+    <p>Solid cherry, walnut, and oak cases with hand-rubbed satin finish. Handcrafted in Manchester, Ohio and available in dozens of sizes — from small knife displays to full sword cases.</p>
+  </div>
+</div>
+
+<div class="feat-bar">
+  <div class="feat-bar-inner">
+    <div class="fb-item"><span>🔩</span> Solid Brass Hinges</div>
+    <div class="fb-item"><span>🪡</span> Red Velveteen Inlay</div>
+    <div class="fb-item"><span>🌲</span> Cherry, Walnut & Oak</div>
+    <div class="fb-item"><span>📐</span> Custom Sizes Available</div>
+    <div class="fb-item"><span>📦</span> Individually Boxed</div>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-lbl">Wood Species</div>
+      <h2 class="sec-title">Three Classic American Hardwoods</h2>
+      <p class="sec-sub">Choose the wood that best complements your collection. All three species are available in every case size.</p>
+    </div>
+    <div class="species-grid">
+      <div class="sp-card">
+        <img class="sp-img" src="https://images.unsplash.com/photo-1534531173927-aeb928d54385?w=600&q=80" alt="Cherry wood display case" loading="lazy">
+        <div class="sp-body">
+          <div class="sp-name">Cherry</div>
+          <p class="sp-desc">Warm reddish-brown that deepens beautifully with age. The most popular choice for knife, coin, and collectible displays. Model numbers end in <strong>2</strong>.</p>
+        </div>
+      </div>
+      <div class="sp-card">
+        <img class="sp-img" src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=600&q=80" alt="Walnut wood display case" loading="lazy">
+        <div class="sp-body">
+          <div class="sp-name">Walnut</div>
+          <p class="sp-desc">Rich chocolate-brown with dramatic natural grain. One of the most sought-after cabinet woods — ideal for formal, upscale display settings. Model numbers end in <strong>3</strong>.</p>
+        </div>
+      </div>
+      <div class="sp-card">
+        <img class="sp-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Oak wood display case" loading="lazy">
+        <div class="sp-body">
+          <div class="sp-name">Oak</div>
+          <p class="sp-desc">Classic American hardwood with distinctive open grain and golden tone. Exceptionally durable — an excellent choice for heavy-use displays. Model numbers end in <strong>4</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-head" style="margin-top:24px">
+      <div class="sec-lbl">Quality Features</div>
+      <h2 class="sec-title">Built to Last a Lifetime</h2>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-item"><div class="feat-icon">🔩</div><div class="feat-text">Solid brass hinges & brass-plated clasp locks</div></div>
+      <div class="feat-item"><div class="feat-icon">🪡</div><div class="feat-text">Rich red foam velveteen inlay (blue, black & green available)</div></div>
+      <div class="feat-item"><div class="feat-icon">🔲</div><div class="feat-text">Easy glass replacement design</div></div>
+      <div class="feat-item"><div class="feat-icon">🦶</div><div class="feat-text">Scratch-preventing felt pads on case bottoms</div></div>
+      <div class="feat-item"><div class="feat-icon">🔗</div><div class="feat-text">Biscuit & spline corner reinforcement on deeper cases</div></div>
+      <div class="feat-item"><div class="feat-icon">✨</div><div class="feat-text">Grain-enhancing, hand-rubbed satin finish</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--blue-pale)">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-lbl">Available Sizes</div>
+      <h2 class="sec-title">Full Size Range</h2>
+      <p class="sec-sub">All models available in cherry (2), walnut (3), and oak (4). Custom non-stock sizes available on request.</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Model</th><th>Outer Dimensions</th><th>Interior Depth</th><th>Type</th></tr></thead>
+        <tbody>
+          <tr><td>202/203/204</td><td>7" × 18" × 1⅞"</td><td>1" inside</td><td>Hinged Display</td></tr>
+          <tr><td>302/303/304</td><td>7½" × 9½" × 1⅞"</td><td>1" inside</td><td>Hinged Display</td></tr>
+          <tr><td>322/323/324</td><td>5" × 10" × 1⅞"</td><td>1" inside</td><td>Hinged Display</td></tr>
+          <tr><td>402/403/404</td><td>9½" × 12" × 1⅞"</td><td>1" inside</td><td>Hinged Display</td></tr>
+          <tr><td>422/423/424</td><td>9½" × 12" × 2⅞"</td><td>2" inside</td><td>Hinged Display</td></tr>
+          <tr><td>452/453/454</td><td>9½" × 12" × 3⅞"</td><td>3" inside</td><td>Hinged Display</td></tr>
+          <tr><td>462/463/464</td><td>9¼" × 15¾" × 1⅞"</td><td>1" inside</td><td>Hinged Display</td></tr>
+          <tr><td>502/503/504</td><td>12" × 18" × 1⅞"</td><td>1" inside</td><td>Hinged Display</td></tr>
+          <tr><td>552/553/554</td><td>12" × 18" × 2⅞"</td><td>2" inside</td><td>Hinged Display</td></tr>
+          <tr><td>602/603/604</td><td>9" × 25" × 1⅞"</td><td>1" inside</td><td>Hinged Display</td></tr>
+          <tr><td>642/643/644</td><td>12" × 42" × 4"</td><td>3" inside</td><td>Sword Display</td></tr>
+          <tr><td>652/653/654</td><td>18" × 24" × 2⅞"</td><td>2" inside</td><td>Hinged Display</td></tr>
+          <tr><td>682/683/684</td><td>18" × 24" × 1⅞"</td><td>1" inside</td><td>Hinged Display</td></tr>
+          <tr><td>882/883/884</td><td>18" × 18" × 2⅞"</td><td>2" inside</td><td>Flag Display</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-note"><strong>Need a custom size?</strong> We build non-stock, made-to-order cases for an additional charge. <a href="contact.html" style="color:var(--blue);font-weight:600">Contact us</a> with your exact dimensions.</div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="velvet-grid">
+      <img class="velvet-img" src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?w=800&q=80" alt="Velveteen lined display case" loading="lazy">
+      <div>
+        <div class="sec-lbl">Velveteen Inserts & Accessories</div>
+        <h2 class="sec-title">Customize Your Case Interior</h2>
+        <p style="font-size:.92rem;color:var(--muted);line-height:1.8;margin-bottom:20px">Standard inlay is rich red foam velveteen. Blue, black, and green are available at an additional cost. Optional cherry, walnut, or oak wooden feet available to enable stand-up display.</p>
+        <div class="color-dots">
+          <div class="dot" style="background:#8b0000;border-color:#8b0000" title="Red"></div>
+          <div class="dot" style="background:#1a1a2e;border-color:#1a1a2e" title="Black"></div>
+          <div class="dot" style="background:#1a3a5c;border-color:#1a3a5c" title="Blue"></div>
+          <div class="dot" style="background:#1a4731;border-color:#1a4731" title="Green"></div>
+        </div>
+        <p style="font-size:.82rem;color:var(--muted);margin-bottom:24px">Available in red, black, blue, and green. Replacement velvet inserts sold separately for all series.</p>
+        <a href="contact.html" class="btn btn-blue">Order Your Case →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Find Your Perfect Wooden Display Case</h2>
+    <p>Not sure which size or species is right for you? Call us and we'll help you find the perfect match for your collection.</p>
+    <a href="tel:9375493902" class="cta-phone">(937) 549-3902</a>
+    <div class="cta-btns">
+      <a href="mailto:sales@s-denterprises.com" class="btn btn-white">Email Sales</a>
+      <a href="contact.html" class="btn btn-outline-w">Request a Quote</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-name">S & D & T Enterprises, INC.</div>
+        <p class="foot-desc">Handcrafted display cases made in Manchester, Ohio since the early 1970s.</p>
+        <div class="foot-contact">
+          <a href="tel:9375493902">📞 (937) 549-3902</a>
+          <span>📠 (937) 549-2709</span>
+          <a href="mailto:sales@s-denterprises.com">✉️ sales@s-denterprises.com</a>
+          <span>📍 20 E 7th St, Manchester, OH 45144</span>
+        </div>
+      </div>
+      <div class="foot-col"><h4>Products</h4><ul><li><a href="wooden.html">Wooden Cases</a></li><li><a href="aluminum.html">Aluminum Cases</a></li><li><a href="riker.html">Riker Chipboards</a></li><li><a href="lucite.html">Lucite & Stands</a></li></ul></div>
+      <div class="foot-col"><h4>Company</h4><ul><li><a href="index.html">Home</a></li><li><a href="contact.html">Contact</a></li><li><a href="contact.html#policy">Return Policy</a></li></ul></div>
+      <div class="foot-col"><h4>Get Help</h4><ul><li><a href="contact.html">Request a Quote</a></li><li><a href="tel:9375493902">Call Us</a></li><li><a href="mailto:sales@s-denterprises.com">Email Sales</a></li></ul></div>
+    </div>
+    <div class="foot-bottom"><div class="foot-copy">© 2026 S & D & T Enterprises, INC. All rights reserved.</div><div class="made">🇺🇸 Made in USA</div></div>
+  </div>
+</footer>
+</body>
+</html>
