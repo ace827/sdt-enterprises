@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aluminum Display Cases | S & D & T Enterprises — Manchester, Ohio</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;color:#1e293b;background:#fff;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Playfair Display',serif}
+a{text-decoration:none;color:inherit}img{display:block;max-width:100%}
+:root{--blue:#2563eb;--blue-l:#3b82f6;--blue-pale:#eff6ff;--blue-mid:#dbeafe;--slate:#1e293b;--slate2:#334155;--muted:#64748b;--border:#e2e8f0}
+.topbar{background:#0f172a;color:#64748b;font-size:.78rem;padding:8px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.tb-left{display:flex;gap:18px;flex-wrap:wrap}.tb-left span{display:flex;align-items:center;gap:5px}
+.topbar a{color:#7dd3fc}.topbar a:hover{color:#fff}
+.tb-phone{background:var(--blue);color:#fff!important;padding:5px 14px;border-radius:4px;font-weight:600;font-size:.8rem}
+nav{background:#fff;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;box-shadow:0 1px 8px rgba(0,0,0,.07)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-brand{display:flex;align-items:center;gap:11px}
+.nav-logo{background:var(--blue);color:#fff;width:40px;height:40px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:.95rem;flex-shrink:0}
+.nav-name{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--slate);line-height:1.15}
+.nav-sub{font-size:.65rem;color:var(--muted);}
+.nav-links{display:flex;gap:2px;list-style:none;align-items:center}
+.nav-links a{font-size:.83rem;font-weight:500;color:var(--slate2);padding:7px 12px;border-radius:6px;transition:.2s}
+.nav-links a:hover,.nav-links a.active{background:var(--blue-pale);color:var(--blue)}
+.nav-cta{background:var(--blue)!important;color:#fff!important;padding:8px 16px!important;border-radius:6px!important;font-weight:600!important}
+.nav-cta:hover{background:var(--blue-l)!important}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.burger span{width:22px;height:2px;background:var(--slate);border-radius:2px;display:block}
+.mob-menu{display:none;background:#fff;border-top:1px solid var(--border);padding:10px 20px;flex-direction:column;gap:2px}
+.mob-menu a{display:block;padding:10px 12px;color:var(--slate2);font-size:.88rem;border-radius:6px}
+.mob-menu a:hover,.mob-menu a.active{background:var(--blue-pale);color:var(--blue)}
+.mob-menu.open{display:flex}
+section{padding:72px 0}.container{max-width:1200px;margin:0 auto;padding:0 20px}
+.sec-lbl{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:8px}
+.sec-title{font-size:clamp(1.7rem,3vw,2.4rem);color:var(--slate);margin-bottom:12px;line-height:1.2}
+.sec-sub{font-size:.93rem;color:var(--muted);line-height:1.8;max-width:600px;font-weight:300}
+.sec-head{margin-bottom:48px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:8px;font-weight:600;font-size:.87rem;transition:.2s;border:none;font-family:'Inter',sans-serif}
+.btn-blue{background:var(--blue);color:#fff}.btn-blue:hover{background:var(--blue-l)}
+.btn-white{background:#fff;color:var(--blue)}.btn-white:hover{background:#dbeafe}
+.btn-outline-w{background:transparent;border:2px solid rgba(255,255,255,.45);color:#fff}.btn-outline-w:hover{background:rgba(255,255,255,.1)}
+.page-hero{background:linear-gradient(135deg,#0f172a 0%,#1e3a8a 60%,#1d4ed8 100%);padding:72px 20px 80px;text-align:center;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 80%,rgba(56,189,248,.15) 0%,transparent 60%)}
+.page-hero-inner{position:relative;z-index:1;max-width:680px;margin:0 auto}
+.ph-crumb{font-size:.75rem;color:#94a3b8;margin-bottom:16px;display:flex;align-items:center;justify-content:center;gap:8px}
+.ph-crumb a{color:#7dd3fc}
+.page-hero h1{font-size:clamp(2rem,5vw,3.2rem);color:#fff;margin-bottom:14px;line-height:1.15}
+.page-hero p{font-size:.97rem;color:#94a3b8;line-height:1.8;font-weight:300}
+.feat-bar{background:var(--blue);padding:20px}
+.feat-bar-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
+.fb-item{display:flex;align-items:center;gap:8px;font-size:.82rem;font-weight:500;color:#dbeafe}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.split img{width:100%;border-radius:12px;aspect-ratio:4/3;object-fit:cover}
+.feat-list{list-style:none;display:flex;flex-direction:column;gap:13px;margin:20px 0 28px}
+.feat-list li{display:flex;align-items:flex-start;gap:12px;font-size:.9rem;color:var(--slate2);line-height:1.6}
+.ck{width:20px;height:20px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;color:#fff;font-size:.7rem;font-weight:700}
+.table-wrap{overflow-x:auto;border-radius:10px;border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+thead th{background:var(--blue);color:#fff;padding:13px 16px;text-align:left;font-weight:600;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+tbody tr{border-bottom:1px solid var(--border)}
+tbody tr:hover{background:var(--blue-pale)}
+tbody td{padding:11px 16px;color:var(--slate2);line-height:1.4}
+tbody td:first-child{color:var(--blue);font-weight:600;font-size:.8rem}
+.table-note{margin-top:14px;padding:14px 18px;background:var(--blue-pale);border-left:3px solid var(--blue);border-radius:4px;font-size:.84rem;color:var(--muted);line-height:1.65}
+.color-chips{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
+.chip{padding:8px 16px;border-radius:20px;font-size:.78rem;font-weight:600;letter-spacing:.04em}
+.cta{background:linear-gradient(135deg,var(--blue) 0%,#0ea5e9 100%);padding:64px 20px;text-align:center}
+.cta h2{font-size:clamp(1.7rem,3vw,2.4rem);color:#fff;margin-bottom:10px}
+.cta p{font-size:.95rem;color:#bfdbfe;margin-bottom:26px;line-height:1.75;max-width:520px;margin-left:auto;margin-right:auto}
+.cta-phone{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#fff;display:block;margin-bottom:20px}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+footer{background:#0f172a;padding:52px 0 24px}
+.foot-inner{max-width:1200px;margin:0 auto;padding:0 20px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.08)}
+.foot-name{font-family:'Playfair Display',serif;font-size:1.05rem;color:#fff;margin-bottom:10px}
+.foot-desc{font-size:.83rem;color:#475569;line-height:1.75;margin-bottom:16px}
+.foot-contact{display:flex;flex-direction:column;gap:7px}
+.foot-contact a,.foot-contact span{font-size:.82rem;color:#64748b;display:flex;align-items:center;gap:7px}
+.foot-contact a{color:#7dd3fc}.foot-contact a:hover{color:#fff}
+.foot-col h4{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#94a3b8;margin-bottom:14px}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.foot-col ul a{font-size:.83rem;color:#475569;transition:.2s}
+.foot-col ul a:hover{color:#7dd3fc}
+.foot-bottom{padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.foot-copy{font-size:.76rem;color:#334155}
+.made{background:rgba(37,99,235,.2);border:1px solid rgba(37,99,235,.35);color:#7dd3fc;font-size:.7rem;font-weight:700;padding:4px 12px;border-radius:20px}
+@media(max-width:900px){.nav-links{display:none}.burger{display:flex}.split{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr 1fr;gap:24px}.feat-bar-inner{gap:20px}}
+@media(max-width:600px){section{padding:52px 0}.foot-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="tb-left"><span>📍 20 E 7th Street, Manchester, OH 45144</span><span>✉️ <a href="mailto:sales@s-denterprises.com">sales@s-denterprises.com</a></span></div><a href="tel:9375493902" class="tb-phone topbar">☎ (937) 549-3902</a></div>
+<nav><div class="nav-inner"><a href="index.html" class="nav-brand"><div class="nav-logo">S&D</div><div><div class="nav-name">S & D & T Enterprises</div><div class="nav-sub">Manchester, Ohio · Est. 1970s</div></div></a>
+<ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="wooden.html">Wooden</a></li><li><a href="aluminum.html" class="active">Aluminum</a></li><li><a href="riker.html">Riker Boards</a></li><li><a href="lucite.html">Lucite</a></li><li><a href="contact.html" class="nav-cta">Get a Quote</a></li></ul>
+<button class="burger" onclick="document.getElementById('mm').classList.toggle('open')"><span></span><span></span><span></span></button></div>
+<div class="mob-menu" id="mm"><a href="index.html">Home</a><a href="wooden.html">Wooden Cases</a><a href="aluminum.html" class="active">Aluminum Cases</a><a href="riker.html">Riker Boards</a><a href="lucite.html">Lucite & Stands</a><a href="contact.html" style="color:var(--blue);font-weight:600">Get a Quote →</a></div></nav>
+
+<div class="page-hero"><div class="page-hero-inner"><div class="ph-crumb"><a href="index.html">Home</a> › Aluminum Display Cases</div><h1>Aluminum Display Cases</h1><p>Lightweight, portable anodized aluminum cases with tempered safety glass and tamper-proof locks. A division of Allstate Manufacturing Co. — built for shows, retail, and travel.</p></div></div>
+
+<div class="feat-bar"><div class="feat-bar-inner"><div class="fb-item"><span>🔒</span> Tamper-Proof Keyed Lock</div><div class="fb-item"><span>🔩</span> All-Riveted Construction</div><div class="fb-item"><span>🪟</span> Tempered Safety Glass</div><div class="fb-item"><span>⚖️</span> Lightweight & Portable</div><div class="fb-item"><span>🎨</span> Deluxe Color Inserts</div></div></div>
+
+<section><div class="container"><div class="split">
+<img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=800&q=80" alt="Aluminum display case" loading="lazy">
+<div>
+<div class="sec-lbl">Built for Portability & Security</div>
+<h2 class="sec-title">Premium Anodized Aluminum Cases</h2>
+<p style="font-size:.92rem;color:var(--muted);line-height:1.8;margin-bottom:6px">Our aluminum cases from Allstate Manufacturing Co. are designed for collectors and dealers who need a secure, portable display solution. Whether at a show, in a retail setting, or on the road, these cases deliver professional presentation with maximum protection.</p>
+<ul class="feat-list">
+<li><span class="ck">✓</span><span>Full-length continuous hinge for added strength</span></li>
+<li><span class="ck">✓</span><span>Solid masonite bottoms for rigidity</span></li>
+<li><span class="ck">✓</span><span>Built-in support arms to hold case open</span></li>
+<li><span class="ck">✓</span><span>Tamper-proof keyed cylinder lock</span></li>
+<li><span class="ck">✓</span><span>All riveted construction — no loose screws</span></li>
+<li><span class="ck">✓</span><span>Tempered safety glass viewing panel</span></li>
+<li><span class="ck">✓</span><span>Individually boxed for safe shipment</span></li>
+</ul>
+<a href="contact.html" class="btn btn-blue">Order Now →</a>
+</div></div></div></section>
+
+<section style="background:var(--blue-pale)"><div class="container">
+<div class="sec-head"><div class="sec-lbl">Available Models</div><h2 class="sec-title">Sizes & Specifications</h2></div>
+<div class="table-wrap"><table><thead><tr><th>Model</th><th>Dimensions</th><th>Opening Style</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>0175</td><td>18" × 24" × 3¼"</td><td>Side Opening</td><td>Aluminum finish</td></tr>
+<tr><td>0180</td><td>18" × 24" × 3¼"</td><td>End Opening</td><td>Aluminum finish</td></tr>
+<tr><td>1150</td><td>22" × 34" × 3¼"</td><td>Side Opening</td><td>Aluminum finish</td></tr>
+<tr><td>1170</td><td>22" × 34" × 3¼"</td><td>End Opening</td><td>Aluminum finish</td></tr>
+<tr><td>1190</td><td>3-Tier Display</td><td>Side Opening</td><td>Built into 1150 case</td></tr>
+</tbody></table></div>
+<div class="table-note"><strong>Color inserts:</strong> Model 2080 (17½" × 23½", fits 0175/0180) and 2085 (21½" × 33½", fits 1150/1170) available in black, blue, green, or red.</div>
+</div></section>
+
+<section><div class="container"><div class="split" style="gap:48px">
+<div>
+<div class="sec-lbl">Deluxe Bottom Inserts</div>
+<h2 class="sec-title">Customize Your Case Interior</h2>
+<p style="font-size:.92rem;color:var(--muted);line-height:1.8;margin-bottom:20px">Upgrade your aluminum case with a color deluxe bottom insert. Available in five colors to match your display style or brand identity.</p>
+<div class="color-chips">
+<div class="chip" style="background:#8b0000;color:#fff">Red</div>
+<div class="chip" style="background:#1a237e;color:#fff">Blue</div>
+<div class="chip" style="background:#1a1a1a;color:#fff">Black</div>
+<div class="chip" style="background:#1b5e20;color:#fff">Green</div>
+<div class="chip" style="background:#4a148c;color:#fff">Burgundy</div>
+</div>
+<p style="font-size:.84rem;color:var(--muted);margin-top:8px">Insert #2080 fits models 0175/0180 · Insert #2085 fits models 1150/1170</p>
+</div>
+<img src="https://images.unsplash.com/photo-1618354691792-d1d42acfd860?w=800&q=80" alt="Display case interior colors" loading="lazy" style="border-radius:12px">
+</div></div></section>
+
+<section class="cta"><div class="container">
+<h2>Need Aluminum Cases for Your Next Show?</h2>
+<p>Call us or email for pricing and availability. We ship nationwide from Manchester, Ohio.</p>
+<a href="tel:9375493902" class="cta-phone">(937) 549-3902</a>
+<div class="cta-btns"><a href="mailto:sales@s-denterprises.com" class="btn btn-white">Email Sales</a><a href="contact.html" class="btn btn-outline-w">Request a Quote</a></div>
+</div></section>
+
+<footer><div class="foot-inner"><div class="foot-grid">
+<div><div class="foot-name">S & D & T Enterprises, INC.</div><p class="foot-desc">Handcrafted display cases made in Manchester, Ohio since the early 1970s.</p><div class="foot-contact"><a href="tel:9375493902">📞 (937) 549-3902</a><span>📠 (937) 549-2709</span><a href="mailto:sales@s-denterprises.com">✉️ sales@s-denterprises.com</a><span>📍 20 E 7th St, Manchester, OH 45144</span></div></div>
+<div class="foot-col"><h4>Products</h4><ul><li><a href="wooden.html">Wooden Cases</a></li><li><a href="aluminum.html">Aluminum Cases</a></li><li><a href="riker.html">Riker Chipboards</a></li><li><a href="lucite.html">Lucite & Stands</a></li></ul></div>
+<div class="foot-col"><h4>Company</h4><ul><li><a href="index.html">Home</a></li><li><a href="contact.html">Contact</a></li><li><a href="contact.html#policy">Return Policy</a></li></ul></div>
+<div class="foot-col"><h4>Get Help</h4><ul><li><a href="contact.html">Request a Quote</a></li><li><a href="tel:9375493902">Call Us</a></li><li><a href="mailto:sales@s-denterprises.com">Email Sales</a></li></ul></div>
+</div><div class="foot-bottom"><div class="foot-copy">© 2026 S & D & T Enterprises, INC. All rights reserved.</div><div class="made">🇺🇸 Made in USA</div></div></div></footer>
+</body></html>
